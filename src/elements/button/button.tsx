@@ -1,6 +1,4 @@
 import { cva, type VariantProps } from "class-variance-authority";
-
-import React from "react";
 import classMerge from "../../helpers/class-merge";
 
 const buttonVariants = cva(

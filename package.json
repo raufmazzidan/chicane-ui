@@ -1,8 +1,19 @@
 {
   "name": "design-system-playground",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/design-system-playground.umd.cjs",
+  "module": "./dist/design-system-playground.js",
+  "exports": {
+    ".": {
+      "import": "./dist/design-system-playground.js",
+      "require": "./dist/design-system-playground.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,7 +22,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "publish": "rm -rf ./dist && npm run build && npm publish"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
@@ -50,6 +62,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.1"
   }
 }

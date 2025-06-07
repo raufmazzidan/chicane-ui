@@ -1,7 +1,7 @@
 {
   "name": "@raufmazzidan/design-system-playground",
   "private": false,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "type": "module",
   "files": [
     "dist"
@@ -13,6 +13,9 @@
     ".": {
       "import": "./dist/design-system-playground.es.js",
       "require": "./dist/design-system-playground.umd.cjs"
+    },
+    "./style": {
+      "default": "./dist/index.css"
     }
   },
   "scripts": {
@@ -24,7 +27,7 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "send": "rm -rf ./dist && npm run build && yarn publish"
+    "send": "rm -rf ./dist && npm run build && git add . && yarn publish"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",

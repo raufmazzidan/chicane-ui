@@ -19,7 +19,11 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "DesignSystemPlayground",
       formats: ["es", "umd"],
-      fileName: (format) => `design-system-playgournd.${format}.js`,
+      fileName: (format) => `design-system-playground.${format}.js`,
     },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+    },
+    cssCodeSplit: true,
   },
 });

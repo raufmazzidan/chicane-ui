@@ -1,5 +1,6 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import classMerge from "../../helpers/class-merge";
+import type { ButtonProps } from "./button.types";
 
 const buttonVariants = cva(
   "outline-none cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium disabled:opacity-50 disabled:pointer-events-none",
@@ -22,10 +23,6 @@ const buttonVariants = cva(
     },
   }
 );
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
 
 const Button: React.FC<ButtonProps> = ({
   className,

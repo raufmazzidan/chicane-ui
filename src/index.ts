@@ -1,3 +1,3 @@
 import "../src/styles.css";
 
-export { default as Button, type ButtonProps } from "./elements/button";
+export * from "./elements/button";

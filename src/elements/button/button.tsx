@@ -24,7 +24,7 @@ const buttonVariants = cva(
   }
 );
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   className,
   variant,
   size,
@@ -40,5 +40,3 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-
-export default Button;

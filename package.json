@@ -25,6 +25,7 @@
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "preview": "vite preview --base=/ --outDir=storybook-static",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "send": "rm -rf ./dist && npm run build && git add . && yarn publish"

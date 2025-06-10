@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     dts({
-      tsconfigPath: "./tsconfig.build.json", // ← use the new one
+      tsconfigPath: "./tsconfig.build.json",
       insertTypesEntry: true,
       outDir: "dist",
       rollupTypes: true,

@@ -1,6 +1,5 @@
 import { cva } from "class-variance-authority";
-import classMerge from "../../helpers/class-merge";
-import type { ButtonProps } from "./button.types";
+import { classMerge } from "../../helpers";
 
 const buttonVariants = cva(
   "outline-none cursor-pointer inline-flex items-center justify-center rounded-md text-sm font-medium disabled:opacity-50 disabled:pointer-events-none",
@@ -23,6 +22,18 @@ const buttonVariants = cva(
     },
   }
 );
+
+export const __debug = true;
+
+export interface ButtonProps
+  extends Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    "disabled" | "id"
+  > {
+  variant?: "default" | "ghost" | "outline";
+  size?: "sm" | "md" | "lg";
+  isDisabled?: boolean;
+}
 
 export const Button: React.FC<ButtonProps> = ({
   className,

@@ -1,3 +1,3 @@
 import "../src/styles.css";
 
-export * from "./elements/button";
+export * from "./elements/button/button";

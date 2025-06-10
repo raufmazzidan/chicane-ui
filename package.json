@@ -1,5 +1,5 @@
 {
-  "name": "@raufmazzidan/design-system-playground",
+  "name": "chicane-ui",
   "private": false,
   "version": "1.0.14",
   "type": "module",
@@ -7,24 +7,22 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/design-system-playground.umd.cjs",
-  "module": "./dist/design-system-playground.es.js",
-  "style": "dist/index.css",
+  "main": "./dist/core.umd.cjs",
+  "module": "./dist/core.es.js",
+  "style": "./dist/index.css",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/design-system-playground.es.js",
-      "require": "./dist/design-system-playground.umd.cjs"
+      "import": "./dist/core.es.js",
+      "require": "./dist/core.umd.cjs"
     },
     "./style": {
       "default": "./dist/index.css"
     }
   },
   "scripts": {
-    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",

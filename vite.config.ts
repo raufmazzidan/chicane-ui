@@ -28,7 +28,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "DesignSystemPlayground",
       formats: ["es", "umd"],
-      fileName: (format) => `design-system-playground.${format}.js`,
+      fileName: (format) => `core.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],

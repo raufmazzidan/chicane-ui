@@ -17,6 +17,10 @@ const meta = {
       options: ["default", "outline", "ghost"],
       description: "variant of the button",
     },
+    isDisabled: {
+      control: { type: "boolean" },
+      description: "disables the button",
+    },
   },
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
@@ -27,6 +31,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: "Default Button",
+    isDisabled: false,
   },
 };
 

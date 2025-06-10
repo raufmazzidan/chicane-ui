@@ -15,10 +15,14 @@ const buttonVariants = cva(
         md: "h-10 px-4 text-base",
         lg: "h-12 px-6 text-lg",
       },
+      isDisabled: {
+        true: "bg-slate-700 border-slate-800 text-slate-900 cursor-not-allowed",
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "md",
+      isDisabled: false,
     },
   }
 );
@@ -40,12 +44,17 @@ export const Button: React.FC<ButtonProps> = ({
   variant,
   size,
   children,
+  isDisabled,
   ...props
 }) => {
   return (
     <button
-      className={classMerge(buttonVariants({ variant, size }), className)}
       {...props}
+      className={classMerge(
+        buttonVariants({ variant, size, isDisabled }),
+        className
+      )}
+      disabled={isDisabled}
     >
       {children}
     </button>

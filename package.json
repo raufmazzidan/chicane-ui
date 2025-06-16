@@ -1,7 +1,7 @@
 {
   "name": "chicane-ui",
   "private": false,
-  "version": "1.0.14",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"

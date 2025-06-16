@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { classMerge } from "../../helpers";
 import type { TagsProps } from "./tags.types";
 
@@ -21,4 +21,4 @@ const Tags = forwardRef<HTMLDivElement, TagsProps>(
   }
 );
 
-export default React.memo(Tags);
+export default Tags;

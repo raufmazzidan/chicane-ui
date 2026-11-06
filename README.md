@@ -1,25 +1,25 @@
 # ⚡ chicane-ui
 
-> UI components cooked with pure rizz and zero bloat. No cap. 🚀
+> UI components forged for the lone wolf developer. Pure grindset, zero bloat. 🗿🍷
 
-A lightweight, modern React 19 component library styled with **Tailwind CSS v4** and **Class Variance Authority (CVA)**.
-
----
-
-### 💅 What Is This Even?
-
-Listen bestie, nobody has time to code another `<button>` from scratch for the 47th time this week. `chicane-ui` is built for devs who just want to ship clean, responsive, and aesthetic interfaces without the heavyweight drama.
-
-- 🏎️ **Speedrun Your UI**: Pre-styled, composable elements ready to drop into your project immediately.
-- 💅 **Aesthetic AF**: Thoughtful padding, smooth hover states, and modern colors that pass the vibe check.
-- 🔒 **Type-Safe Fr**: Full TypeScript support out of the box so your IDE doesn't yell at you.
-- 🧼 **Zero Bloat**: Powered by React 19, Tailwind CSS v4, and `clsx` / `tailwind-merge`. Pure utility, zero junk.
+A high-performance React 19 component library forged with **Tailwind CSS v4** and **Class Variance Authority (CVA)**.
 
 ---
 
-### 📦 Installation
+### 🗿 The Sigma Protocol (What Is This?)
 
-Grab your favorite package manager and pull up:
+Real sigmas don't waste 4 hours re-centering divs or fighting button CSS at 3 AM while other devs are sleeping. You lock in, ship the product, and let `chicane-ui` mog bloated component libraries.
+
+- 🗿 **Pure Efficiency**: Pre-styled, composable elements engineered for maximum developer speed.
+- 🏎️ **Mog The Competition**: Razor-sharp typography, ultra-clean states, and cold minimalism.
+- 🔒 **Type-Safe Grind**: Hardened TypeScript types out of the box. Zero weak code.
+- 🧼 **Zero Bloat**: Built strictly on React 19, Tailwind CSS v4, and `cva`. Maximum performance, zero deadweight.
+
+---
+
+### 📦 Lock In (Installation)
+
+Command your package manager:
 
 ```bash
 # npm
@@ -37,20 +37,19 @@ bun add chicane-ui
 
 ---
 
-### 🎨 Import Styles
+### 🗿 Inject Styles
 
-Don't forget the stylesheet bestie, otherwise your components will look like plain 1995 HTML (unless that's your aesthetic, we don't judge):
+Import the core stylesheet into your root entry file (`main.tsx`, `App.tsx`, or `layout.tsx`):
 
 ```tsx
-// In your root file (main.tsx, App.tsx, or layout.tsx)
 import "chicane-ui/style";
 ```
 
 ---
 
-### 🚀 How To Use (Quick Start)
+### ⚡ Quick Start (High-Value Example)
 
-Import the components and cook up something fire:
+Drop components into your code and start building:
 
 ```tsx
 import React from "react";
@@ -59,33 +58,40 @@ import "chicane-ui/style";
 
 export default function App() {
   return (
-    <main className="p-8 flex flex-col items-start gap-4 font-sans">
-      {/* Tags */}
-      <Tags label="v0.0.2 • Main Character Energy" />
+    <main className="p-8 flex flex-col items-start gap-4 font-sans bg-zinc-50 min-h-screen text-zinc-900">
+      {/* Badge */}
+      <Tags
+        label="SIGMA PROTOCOL • v0.0.2"
+        className="bg-zinc-900 text-zinc-100 font-bold"
+      />
 
       <h1 className="text-3xl font-extrabold tracking-tight">
-        Cook Fast, Ship Faster ⚡
+        While They Sleep, You Ship 🗿
       </h1>
       <p className="text-zinc-600">
-        Stop fighting CSS and start dropping clean components.
+        Cut out the bloat. Deploy clean UI with zero friction.
       </p>
 
       {/* Button Showcase */}
       <div className="flex flex-wrap items-center gap-3 pt-2">
-        <Button variant="default" size="md" onClick={() => alert("it's giving clicked")}>
-          Default Button
+        <Button
+          variant="default"
+          size="md"
+          onClick={() => console.log("Locked in.")}
+        >
+          Execute
         </Button>
 
         <Button variant="outline" size="md">
-          Outline Vibe
+          Grindset
         </Button>
 
         <Button variant="ghost" size="md">
-          Ghost Mode
+          Silent Focus
         </Button>
 
         <Button isDisabled size="md">
-          Disabled (Touch Grass)
+          Distractions Disabled
         </Button>
       </div>
     </main>
@@ -95,65 +101,68 @@ export default function App() {
 
 ---
 
-### 🧩 Components Cheat Sheet
+### 🧩 Components Arsenal
 
 #### 1. `<Button />`
-Buttons that actually click with your users.
+
+Built for high-pressure execution. Fully customizable with variants, sizes, and states.
 
 ```tsx
 import { Button } from "chicane-ui";
 
-// Variants: "default" (default), "outline", "ghost"
-// Sizes: "sm", "md" (default), "lg"
-// State: isDisabled
-<Button variant="outline" size="lg" onClick={handleSave}>
-  Save Changes
-</Button>
+<Button variant="default" size="md" onClick={handleExecute}>
+  Take Action
+</Button>;
 ```
 
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `variant` | `'default' \| 'outline' \| 'ghost'` | `'default'` | Visual treatment |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Button dimensions & typography |
-| `isDisabled` | `boolean` | `false` | Disables button and applies muted styling |
-| `...props` | `ButtonHTMLAttributes` | — | All native HTML button attributes |
+| Prop         | Type                                | Default     | Description                                       |
+| :----------- | :---------------------------------- | :---------- | :------------------------------------------------ |
+| `variant`    | `'default' \| 'outline' \| 'ghost'` | `'default'` | Visual hierarchy                                  |
+| `size`       | `'sm' \| 'md' \| 'lg'`              | `'md'`      | Component scale                                   |
+| `isDisabled` | `boolean`                           | `false`     | Shuts down interaction and applies disabled state |
+| `...props`   | `ButtonHTMLAttributes`              | —           | Standard HTML button attributes                   |
 
 #### 2. `<Tags />`
-Subtle label and badge component for categorizing, tagging, and status indicators.
+
+Precision labels and status indicators for high-priority classification.
 
 ```tsx
 import { Tags } from "chicane-ui";
 
-<Tags label="Feature" />
-<Tags label="Hotfix" as="div" className="bg-amber-100 text-amber-800" />
+<Tags label="Priority Alpha" />
+<Tags label="Cold Storage" as="div" className="bg-zinc-200 text-zinc-800" />
 ```
 
-| Prop | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `label` | `string` | — | Primary text label |
-| `as` | `ElementType` | `'span'` | Polymorphic element tag (`'span'`, `'div'`, etc.) |
-| `className` | `string` | — | Custom Tailwind / CSS classes (auto-merged) |
-| `children` | `ReactNode` | — | Optional badge child content |
+| Prop        | Type          | Default  | Description                                   |
+| :---------- | :------------ | :------- | :-------------------------------------------- |
+| `label`     | `string`      | —        | Text label content                            |
+| `as`        | `ElementType` | `'span'` | Polymorphic element (`'span'`, `'div'`, etc.) |
+| `className` | `string`      | —        | Tailwind utility overrides                    |
+| `children`  | `ReactNode`   | —        | Secondary badge content                       |
 
 ---
 
-### 🛠️ Storybook & Development
+### 🛠️ Storybook & Command Center
 
-Wanna preview the components live and experiment with props? Storybook is already baked in:
+Inspect your components in isolation:
 
 ```bash
-# Start Storybook dev server (port 6006)
+# Launch Storybook dev server
 npm run storybook
 
-# Build Storybook static docs
+# Build Storybook static production docs
 npm run build-storybook
 
-# Build library dist
+# Compile production library bundle
 npm run build
+
+# Clean, build, and publish an update
+npm run publish
+# or yarn publish / npm run publish:update
 ```
 
 ---
 
 ### 📄 License
 
-MIT © [chicane-ui](https://github.com/chicane-ui) — do whatever you want, just ship cool stuff.
+MIT © [chicane-ui](https://github.com/chicane-ui) — stay disciplined, keep shipping.

@@ -1,7 +1,7 @@
 {
   "name": "chicane-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "files": [
     "dist"
@@ -28,7 +28,7 @@
     "preview": "vite preview --base=/ --outDir=storybook-static",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "send": "rm -rf ./dist && npm run build && git add . && yarn publish"
+    "send": "rm -rf ./dist && npm run build && git add . &&  npm publish --access public"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",

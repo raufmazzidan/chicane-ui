@@ -1,0 +1,163 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# ⚡ chicane-ui
+
+> UI components cooked with pure rizz and zero bloat. No cap. 🚀
+
+A lightweight, modern React 19 component library styled with **Tailwind CSS v4** and **Class Variance Authority (CVA)**.
+
+---
+
+### 💅 What Is This Even?
+
+Listen bestie, nobody has time to code another `<button>` from scratch for the 47th time this week. `chicane-ui` is built for devs who just want to ship clean, responsive, and aesthetic interfaces without the heavyweight drama.
+
+- 🏎️ **Speedrun Your UI**: Pre-styled, composable elements ready to drop into your project immediately.
+- 💅 **Aesthetic AF**: Thoughtful padding, smooth hover states, and modern colors that pass the vibe check.
+- 🔒 **Type-Safe Fr**: Full TypeScript support out of the box so your IDE doesn't yell at you.
+- 🧼 **Zero Bloat**: Powered by React 19, Tailwind CSS v4, and `clsx` / `tailwind-merge`. Pure utility, zero junk.
+
+---
+
+### 📦 Installation
+
+Grab your favorite package manager and pull up:
+
+```bash
+# npm
+npm install chicane-ui
+
+# pnpm
+pnpm add chicane-ui
+
+# yarn
+yarn add chicane-ui
+
+# bun
+bun add chicane-ui
+```
+
+---
+
+### 🎨 Import Styles
+
+Don't forget the stylesheet bestie, otherwise your components will look like plain 1995 HTML (unless that's your aesthetic, we don't judge):
+
+```tsx
+// In your root file (main.tsx, App.tsx, or layout.tsx)
+import "chicane-ui/style";
+```
+
+---
+
+### 🚀 How To Use (Quick Start)
+
+Import the components and cook up something fire:
+
+```tsx
+import React from "react";
+import { Button, Tags } from "chicane-ui";
+import "chicane-ui/style";
+
+export default function App() {
+  return (
+    <main className="p-8 flex flex-col items-start gap-4 font-sans">
+      {/* Tags */}
+      <Tags label="v0.0.2 • Main Character Energy" />
+
+      <h1 className="text-3xl font-extrabold tracking-tight">
+        Cook Fast, Ship Faster ⚡
+      </h1>
+      <p className="text-zinc-600">
+        Stop fighting CSS and start dropping clean components.
+      </p>
+
+      {/* Button Showcase */}
+      <div className="flex flex-wrap items-center gap-3 pt-2">
+        <Button variant="default" size="md" onClick={() => alert("it's giving clicked")}>
+          Default Button
+        </Button>
+
+        <Button variant="outline" size="md">
+          Outline Vibe
+        </Button>
+
+        <Button variant="ghost" size="md">
+          Ghost Mode
+        </Button>
+
+        <Button isDisabled size="md">
+          Disabled (Touch Grass)
+        </Button>
+      </div>
+    </main>
+  );
+}
+```
+
+---
+
+### 🧩 Components Cheat Sheet
+
+#### 1. `<Button />`
+Buttons that actually click with your users.
+
+```tsx
+import { Button } from "chicane-ui";
+
+// Variants: "default" (default), "outline", "ghost"
+// Sizes: "sm", "md" (default), "lg"
+// State: isDisabled
+<Button variant="outline" size="lg" onClick={handleSave}>
+  Save Changes
+</Button>
+```
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `variant` | `'default' \| 'outline' \| 'ghost'` | `'default'` | Visual treatment |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Button dimensions & typography |
+| `isDisabled` | `boolean` | `false` | Disables button and applies muted styling |
+| `...props` | `ButtonHTMLAttributes` | — | All native HTML button attributes |
+
+#### 2. `<Tags />`
+Subtle label and badge component for categorizing, tagging, and status indicators.
+
+```tsx
+import { Tags } from "chicane-ui";
+
+<Tags label="Feature" />
+<Tags label="Hotfix" as="div" className="bg-amber-100 text-amber-800" />
+```
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `label` | `string` | — | Primary text label |
+| `as` | `ElementType` | `'span'` | Polymorphic element tag (`'span'`, `'div'`, etc.) |
+| `className` | `string` | — | Custom Tailwind / CSS classes (auto-merged) |
+| `children` | `ReactNode` | — | Optional badge child content |
+
+---
+
+### 🛠️ Storybook & Development
+
+Wanna preview the components live and experiment with props? Storybook is already baked in:
+
+```bash
+# Start Storybook dev server (port 6006)
+npm run storybook
+
+# Build Storybook static docs
+npm run build-storybook
+
+# Build library dist
+npm run build
+```
+
+---
+
+### 📄 License
+
+MIT © [chicane-ui](https://github.com/chicane-ui) — do whatever you want, just ship cool stuff.
